@@ -54,7 +54,7 @@
 <div class="widget tagcloud">
   <h3 class="title">标签云</h3>
   <div class="entry">
-    <a href="/tags/随笔，文章/" style="font-size: NaNpx;">随笔，文章</a>
+    <a href="/tags/技术，方法/" style="font-size: NaNpx;">技术，方法</a><a href="/tags/随笔，文章/" style="font-size: NaNpx;">随笔，文章</a>
   </div>
 </div>
 
@@ -78,6 +78,143 @@
     <div id="wrapper">
       
 <h2 class="archive-title">归档</h2>
+
+
+  
+    
+<article class="post">
+  
+    <div class="gallery">
+  <div class="photoset">
+    
+      <img src="">
+    
+  </div>
+  <div class="control">
+    <div class="prev"></div>
+    <div class="next"></div>
+  </div>
+</div>
+  
+  <div class="post-content">
+  <header>
+      
+      
+  
+    <h1 class="title"><a href="/2014/08/11/2 github创建独立博客过程/">github创建独立博客过程</a></h1>
+  
+
+      <time datetime="2014-08-11T02:12:13.000Z"><a href="/2014/08/11/2 github创建独立博客过程/">8月 11 2014</a></time>
+      
+  </header>
+    <div class="entry">
+      
+        <p>把独立博客创建过程的经验写下来</p>
+<p>步骤：</p>
+<h3 id="1-安装Node-js和github">1.安装Node.js和github</h3>
+<h3 id="2-安装Hexo并初始化">2.安装Hexo并初始化</h3>
+<h3 id="3-配置博客过程遇到的问题">3.配置博客过程遇到的问题</h3>
+<h3 id="4-推荐">4.推荐</h3>
+<hr>
+<h1 id="1-安装Hexo之前必须安装Node-js和github客户端">1.安装Hexo之前必须安装Node.js和github客户端</h1>
+<p><strong>通过pkg安装包安装，安装完Node后提示信息</strong><br>        Node was installed at</p>
+<pre><code>       /usr/<span class="keyword">local</span>/bin/node
+
+    npm was installed <span class="keyword">at</span>
+
+       /usr/<span class="keyword">local</span>/bin/npm
+
+    Make sure <span class="keyword">that</span> /usr/<span class="keyword">local</span>/bin <span class="keyword">is</span> <span class="keyword">in</span> your $PATH.
+</code></pre><p><strong>在终端执行以下命令</strong><br>切换到<br>    cd /usr/local/bin/<br><strong>如果没有管理员权限会报错</strong></p>
+<pre><code>Please <span class="keyword">try</span> running <span class="keyword">this</span> command again <span class="keyword">as</span> root/Administrator.
+</code></pre><p><strong>执行以下操作切换到管理员模式</strong><br>    sudo chown -R $USER /usr/local</p>
+<pre><code>    zhanhxinyudeMacBook-Air:bin zhangxy$ sudo chown -R $USER /usr/local
+
+    WARNING: Improper <span class="operator"><span class="keyword">use</span> <span class="keyword">of</span> the sudo command could <span class="keyword">lead</span> <span class="keyword">to</span> <span class="keyword">data</span> loss
+    <span class="keyword">or</span> the deletion <span class="keyword">of</span> important system files. Please <span class="keyword">double</span>-<span class="keyword">check</span> your
+    typing <span class="keyword">when</span> <span class="keyword">using</span> sudo. Type <span class="string">"man sudo"</span> <span class="keyword">for</span> more information.
+
+    <span class="keyword">To</span> proceed, enter your <span class="keyword">password</span>, <span class="keyword">or</span> type Ctrl-C <span class="keyword">to</span> abort.
+
+    <span class="keyword">Password</span>:</span>
+</code></pre><p><em>PS：密码是不会显示出来的。</em></p>
+<h1 id="2-安装Hexo并初始化-1">2.安装Hexo并初始化</h1>
+<p><strong>2.1 执行命令</strong></p>
+<pre><code><span class="variable">$ </span>npm install -g hexo
+</code></pre><p>如下所示就表示成功了</p>
+<pre><code>    zhanhxinyudeMacBook-<span class="constant">Air</span><span class="symbol">:bin</span> zhangxy<span class="variable">$ </span>npm install -g hexo
+<span class="input"><span class="prompt">
+    &gt;</span> fsevents<span class="variable">@0</span>.<span class="number">2.0</span> install /usr/local/lib/node_modules/hexo/node_modules/chokidar/node_modules/fsevents</span>
+    &gt; node-gyp rebuild
+<span class="input"><span class="prompt">
+      CXX(target) Release/obj.target/fse/fsevents.o
+      SOLINK_MODULE(target) Release/fse.node
+      SOLINK_MODULE(target) Release/fse.node: Finished
+    /usr/local/bin/hexo -&gt;</span> /usr/local/lib/node_modules/hexo/bin/hexo</span>
+    hexo<span class="variable">@2</span>.<span class="number">8.2</span> /usr/local/lib/node_modules/hexo
+    ├── strip-indent<span class="variable">@0</span>.<span class="number">1.3</span>
+    ├── hexo-front-matter<span class="variable">@0</span>.<span class="number">0</span>.<span class="number">4</span>
+    ├── sprintf-js<span class="variable">@0</span>.<span class="number">0</span>.<span class="number">7</span>
+    ├── graceful-fs<span class="variable">@3</span>.<span class="number">0</span>.<span class="number">2</span>
+    ├── colors<span class="variable">@0</span>.<span class="number">6.2</span>
+    ├── minimist<span class="variable">@0</span>.<span class="number">2.0</span>
+    ├── mime<span class="variable">@1</span>.<span class="number">2.11</span>
+    ├── async<span class="variable">@0</span>.<span class="number">9.0</span>
+    ├── warehouse<span class="variable">@0</span>.<span class="number">2.2</span> (async<span class="variable">@0</span>.<span class="number">7.0</span>)
+    ├── highlight.js<span class="variable">@8</span>.<span class="number">1.0</span>
+    ├── lodash<span class="variable">@2</span>.<span class="number">4.1</span>
+    ├── moment<span class="variable">@2</span>.<span class="number">8.1</span>
+    ├── morgan<span class="variable">@1</span>.<span class="number">2.2</span> (basic-auth<span class="variable">@1</span>.<span class="number">0</span>.<span class="number">0</span>, depd<span class="variable">@0</span>.<span class="number">4.4</span>, bytes<span class="variable">@1</span>.<span class="number">0</span>.<span class="number">0</span>, finished<span class="variable">@1</span>.<span class="number">2.2</span>)
+    ├── connect<span class="variable">@3</span>.<span class="number">1.0</span> (parseurl<span class="variable">@1</span>.<span class="number">2.0</span>, finalhandler<span class="variable">@0</span>.<span class="number">1.0</span>, utils-merge<span class="variable">@1</span>.<span class="number">0</span>.<span class="number">0</span>, debug<span class="variable">@1</span>.<span class="number">0</span>.<span class="number">4</span>)
+    ├── compression<span class="variable">@1</span>.<span class="number">0</span>.<span class="number">10</span> (vary<span class="variable">@0</span>.<span class="number">1.0</span>, on-headers<span class="variable">@0</span>.<span class="number">0</span>.<span class="number">0</span>, bytes<span class="variable">@1</span>.<span class="number">0</span>.<span class="number">0</span>, compressible<span class="variable">@1</span>.<span class="number">1.1</span>, debug<span class="variable">@1</span>.<span class="number">0</span>.<span class="number">4</span>, accepts<span class="variable">@1</span>.<span class="number">0</span>.<span class="number">7</span>)
+    ├── serve-static<span class="variable">@1</span>.<span class="number">5.1</span> (utils-merge<span class="variable">@1</span>.<span class="number">0</span>.<span class="number">0</span>, escape-html<span class="variable">@1</span>.<span class="number">0</span>.<span class="number">1</span>, parseurl<span class="variable">@1</span>.<span class="number">3.0</span>, send<span class="variable">@0</span>.<span class="number">8.1</span>)
+    ├── js-yaml<span class="variable">@3</span>.<span class="number">1.0</span> (esprima<span class="variable">@1</span>.<span class="number">0</span>.<span class="number">4</span>, argparse<span class="variable">@0</span>.<span class="number">1.15</span>)
+    ├── cheerio<span class="variable">@0</span>.<span class="number">17.0</span> (entities<span class="variable">@1</span>.<span class="number">1.1</span>, dom-serializer<span class="variable">@0</span>.<span class="number">0</span>.<span class="number">1</span>, <span class="constant">CSSselect</span><span class="variable">@0</span>.<span class="number">4.1</span>, htmlparser2<span class="variable">@3</span>.<span class="number">7.3</span>)
+    ├── swig<span class="variable">@1</span>.<span class="number">4.1</span> (optimist<span class="variable">@0</span>.<span class="number">6.1</span>, uglify-js<span class="variable">@2</span>.<span class="number">4.15</span>)
+    └── chokidar<span class="variable">@0</span>.<span class="number">8.2</span> (recursive-readdir<span class="variable">@0</span>.<span class="number">0</span>.<span class="number">2</span>, fsevents<span class="variable">@0</span>.<span class="number">2.0</span>)
+</code></pre><p><strong>2.2 切换到Hexo文件夹下</strong></p>
+<pre><code>$ cd <span class="regexp">/users/</span>zhangxy<span class="regexp">/hexo/</span>
+</code></pre><p>如下所示：<br>        zhanhxinyudeMacBook-Air:~ zhangxy$ cd /users/zhangxy/hexo/<br><strong>2.3 执行初始化命令</strong></p>
+<pre><code><span class="variable">$ </span>hexo init 
+</code></pre><p>如下所示<br>        zhanhxinyudeMacBook-Air:hexo zhangxy$ hexo init<br>        [info] Copying data<br>        [info] You are almost done! Don’t forget to run <code>npm install</code> before you start blogging with Hexo!<br><strong>2.4 安装</strong></p>
+<pre><code><span class="variable">$ </span>npm install
+</code></pre><p>如下所示<br>        zhanhxinyudeMacBook-Air:hexo zhangxy$ npm install<br>        hexo-renderer-ejs@0.1.0 node_modules/hexo-renderer-ejs<br>        ├── ejs@1.0.0<br>        └── lodash@2.4.1</p>
+<pre><code>    hexo-<span class="keyword">renderer</span>-marked<span class="variable">@0</span><span class="number">.1</span><span class="number">.0</span> node_modules/hexo-<span class="keyword">renderer</span>-marked
+    ├── marked<span class="variable">@0</span><span class="number">.3</span><span class="number">.2</span>
+    └── lodash<span class="variable">@2</span><span class="number">.4</span><span class="number">.1</span>
+
+    hexo-<span class="keyword">renderer</span>-stylus<span class="variable">@0</span><span class="number">.1</span><span class="number">.0</span> node_modules/hexo-<span class="keyword">renderer</span>-stylus
+    ├── stylus<span class="variable">@0</span><span class="number">.44</span><span class="number">.0</span> (css-parse<span class="variable">@1</span><span class="number">.7</span><span class="number">.0</span>, mkdirp<span class="variable">@0</span><span class="number">.3</span><span class="number">.5</span>, sax<span class="variable">@0</span><span class="number">.5</span><span class="number">.8</span>, debug<span class="variable">@1</span><span class="number">.0</span><span class="number">.4</span>, glob<span class="variable">@3</span><span class="number">.2</span><span class="number">.11</span>)
+    └── nib<span class="variable">@1</span><span class="number">.0</span><span class="number">.3</span> (stylus<span class="variable">@0</span><span class="number">.37</span><span class="number">.0</span>)
+</code></pre><h2 id="3-配置博客过程遇到的问题-1">3.配置博客过程遇到的问题</h2>
+<p><strong>3.1 在config.yml文件中的链接后缀必须是github.io.git否则会报错</strong></p>
+<p><strong>3.2 必须使用空格，而不能使用tab键否则会报错</strong><br>         reason: ‘bad indentation of a mapping entry’,</p>
+<p><strong>3.3 在deploy过程会让输入github账号和密码</strong><br>            git config —global user.name “Your Name”<br>            git config —global user.email you@example.com</p>
+<p>成功会提示<br>        [info] Deploy done: github<br><strong>3.4 自定义域名问题</strong></p>
+<p>在Hexo目录下的source文件夹下需要建立CNAME文件，用windows下地记事本建立，如果是mac就去下载个txt文本文件修改并改名，不能有后缀。CNAME文件里填上自己的域名地址，不能有多余的内容，如只能有<br>         baobaoibaobao.com</p>
+<p><strong>3.5 通过github客户端复制其它主题到Theme文件夹下</strong></p>
+<h2 id="4-推荐教程">4.推荐教程</h2>
+<p><a href="http://zipperary.com/" target="_blank" rel="external">zipperary</a></p>
+<p><a href="http://jianshu.io/p/05289a4bc8b2" target="_blank" rel="external">如何搭建一个独立博客——简明Github Pages与Hexo教程</a></p>
+
+	 
+	     <p style="margin:20px 0; color:#9f9f9f; font-size:12px;">
+<span>Posted by <a style="color:#9f9f9f;" href="null"><strong>null</strong></a> - 8月 11 2014</span><br />
+<span style="line-height:13px;">如需转载，请注明： 本文来自 <a style="color:#9f9f9f;" href="http://baobaoibaobao.com"><strong>baobaoibaobao’s blog</strong></a></span>
+</p>
+       	 
+      
+    </div>
+    <footer>
+      
+        
+        
+      
+      <div class="clearfix"></div>
+    </footer>
+  </div>
+</article>
+
 
 
   
