@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   
-  <title>随笔，文章 | baobaoibaobao</title>
+  <title>markdown，博客 | baobaoibaobao</title>
   <meta name="author" content="baobao">
   
   <meta name="description" content="互联网、医疗、产品、PM">
@@ -77,7 +77,7 @@
     <div id="main-col" class="alignright">
     <div id="wrapper">
       
-<h2 class="archive-title tag">随笔，文章</h2>
+<h2 class="archive-title tag">markdown，博客</h2>
 
 
   
@@ -101,17 +101,142 @@
       
       
   
-    <h1 class="title"><a href="/2014/08/10/1 缘起/">缘起</a></h1>
+    <h1 class="title"><a href="/2014/08/10/4 Markdown语法/">Markdown语法</a></h1>
   
 
-      <time datetime="2014-08-10T10:12:13.000Z"><a href="/2014/08/10/1 缘起/">8月 10 2014</a></time>
+      <time datetime="2014-08-10T10:12:13.000Z"><a href="/2014/08/10/4 Markdown语法/">8月 10 2014</a></time>
       
   </header>
     <div class="entry">
       
-        <p>很多年前就养成了写博客的习惯，其实博客就是日记，但略有不同，比起日记博客更强调分享，日记却比较私密。不过就我倒不是因为想要满足分享的欲望而写博客，而是因为我希望把自己的知识、经验、见解记录下来，毕竟人总是健忘的，那天忘记了还能回来看看，更重要的是能够在写博客的过程中总结经验，从而提升自己。</p>
-<p>以前一直用新浪博客，也换过好几个博客，最近放弃新浪博客的原因是我必须通过微博关注一些人，或者叫合作伙伴，即将写的一些内容不希望他们看见；新浪博客太多广告了。</p>
-<p>所以就建立了此博客，上个月买了域名，在github上创建了博客，但一直没添加内容，这个月总算有时间着手创建博客了。</p>
+        <p>标题<br>在行首插入1~6个 # 号，分别对应 1 至 6 级标题 :</p>
+<h1 id="一级标题">一级标题</h1>
+<h2 id="二级标题">二级标题</h2>
+<h3 id="三级标题">三级标题</h3>
+<h4 id="四级标题">四级标题</h4>
+<h5 id="五级标题">五级标题</h5>
+<h6 id="六级标题">六级标题</h6>
+<p>强调<br>加粗：</p>
+<p><strong>加粗</strong><br>斜体（部分字体没有倾斜效果）：</p>
+<p><em>倾斜</em><br>链接<br><a href="http://example.com/" target="_blank" rel="external">链接说明</a><br>图片<br><img src="http://example.com/image.png" alt="图片说明"><br>列表<br>有序列表:</p>
+<ol>
+<li>第一列</li>
+<li>第二列</li>
+<li>第三列<br>无序列表:</li>
+</ol>
+<ul>
+<li>某列</li>
+<li>某列</li>
+<li><p>某列<br>可以混合使用有序列表和无序列表:</p>
+</li>
+<li><p>一级项</p>
+<ul>
+<li>二级项</li>
+</ul>
+</li>
+<li>一级项<ol>
+<li>二级项1</li>
+<li>二级项2<ul>
+<li>三级项</li>
+</ul>
+</li>
+<li>二级项3</li>
+</ol>
+</li>
+<li>一级项<br>语句引用<blockquote>
+<p>乔布斯说过：<br>Stay hungry, stay foolish.</p>
+</blockquote>
+</li>
+</ul>
+<blockquote>
+<blockquote>
+<p>你也可以嵌套使用.</p>
+</blockquote>
+<h4 id="标题_也可出现在引用中">标题 也可出现在引用中</h4>
+<ul>
+<li>当然列表也可以.</li>
+<li>是吧.<br>代码<br>单行代码：<code>&lt;code&gt;</code> .</li>
+</ul>
+</blockquote>
+<p>也可以有多行代码：</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="title">line1</span></div><div class="line">line2</div></pre></td></tr></table></figure>
+
+<p>缩进代码块<br>4个空格或者一个 tab 后面的文本都会被当做代码.</p>
+<p>这是一个普通段落.</p>
+<pre><code>这是一段
+代码.
+</code></pre><p>表格<br>一个简单的表格:</p>
+<table>
+<thead>
+<tr>
+<th>Heading</th>
+<th>Heading</th>
+<th>Heading</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td> Cell</td>
+<td>Cell</td>
+<td>Cell</td>
+</tr>
+<tr>
+<td> Cell</td>
+<td>Cell</td>
+<td>Cell</td>
+</tr>
+</tbody>
+</table>
+<p>如果你喜欢，也可以给表格加上外边界（效果和上面一样）:</p>
+<table>
+<thead>
+<tr>
+<th>Heading</th>
+<th>Heading</th>
+<th>Heading</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Cell</td>
+<td>Cell</td>
+<td>Cell</td>
+</tr>
+<tr>
+<td>Cell</td>
+<td>Cell</td>
+<td>Cell</td>
+</tr>
+</tbody>
+</table>
+<p>你可以控制表格里面元素的对其方式:</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">Heading</th>
+<th style="text-align:center">Heading</th>
+<th style="text-align:right">Heading</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left"> Left</td>
+<td style="text-align:center">Center</td>
+<td style="text-align:right">Right</td>
+</tr>
+<tr>
+<td style="text-align:left"> Left</td>
+<td style="text-align:center">Center</td>
+<td style="text-align:right">Right</td>
+</tr>
+</tbody>
+</table>
+<p>删除线<br><del>Strikethrough</del><br>分割线<br>三种分割线:</p>
+<hr>
+<hr>
+<hr>
+<p>手动换行<br>一行结束后加上连续两个空格才会换行，或者回车两下：</p>
+<p>这是一行，后面有两个空格<br>这才是新的一行.</p>
 
 	 
 	     <p style="margin:20px 0; color:#9f9f9f; font-size:12px;">
